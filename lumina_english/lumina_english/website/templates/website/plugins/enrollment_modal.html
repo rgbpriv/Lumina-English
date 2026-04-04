@@ -1,0 +1,25 @@
+<div id="enrollModal" class="fixed inset-0 z- flex items-center justify-center p-6">
+    <div class="bg-white rounded-[40px] w-full max-w-lg overflow-hidden shadow-2xl">
+        <div class="bg-royal-red p-10 text-white relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-white/50 hover:text-white"><i class="fas fa-times text-xl"></i></button>
+            <h3 class="text-3xl font-black serif-font">{{ instance.heading }}</h3>
+            <p class="text-sm text-white/70 mt-2">{{ instance.subtext }}</p>
+        </div>
+        <form class="p-10 space-y-6">
+            <div>
+                <input type="text" placeholder="Your Name" class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-royal-red outline-none transition">
+            </div>
+            <div>
+                <input type="tel" placeholder="Contact Number" class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-royal-red outline-none transition">
+            </div>
+            <div>
+                <select class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-royal-red outline-none transition">
+                    <option>IELTS Mastery</option>
+                    <option>The AI Speaker (Corporate)</option>
+                    <option>Academic Writing</option>
+                </select>
+            </div>
+            <button class="w-full bg-royal-red text-white font-black py-5 rounded-2xl shadow-xl hover:bg-deep-crimson transition uppercase tracking-widest text-xs">Request Invitation</button>
+        </form>
+    </div>
+</div>

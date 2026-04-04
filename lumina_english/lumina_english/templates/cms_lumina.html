@@ -1,0 +1,16 @@
+{% extends "base_tailwind.html" %}
+{% load cms_tags sekizai_tags %}
+
+{% block title %}{% page_attribute 'title' %} - Lumina{% endblock %}
+
+{% block header %}
+    {% placeholder "header" %}
+{% endblock %}
+
+{% block content %}
+    {% placeholder "hero" %}
+{% endblock %}
+
+{% block footer %}
+    {% placeholder "footer" %}
+{% endblock %}

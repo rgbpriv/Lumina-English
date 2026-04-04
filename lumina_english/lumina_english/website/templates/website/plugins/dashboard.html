@@ -1,0 +1,36 @@
+<section id="dashboard" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="bg-white rounded-[40px] shadow-3xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+        <div class="w-full md:w-64 bg-gray-950 p-8 text-white">
+            <div class="flex items-center space-x-3 mb-10">
+                <div class="w-8 h-8 rounded-full bg-royal-red"></div>
+                <span class="font-bold tracking-widest text-[10px] uppercase">Lumina Portal</span>
+            </div>
+            <div class="space-y-6">
+                {{ instance.greeting|default:"" }}
+            </div>
+        </div>
+        <div class="flex-1 p-8 md:p-16">
+            <div class="flex justify-between items-center mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold">{{ instance.greeting }}</h2>
+                    <p class="text-gray-400 text-sm">{{ instance.next_class }}</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-8 rounded-3xl text-center">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">{{ instance.stat_1_title }}</p>
+                    <p class="text-3xl font-black text-royal-red">{{ instance.stat_1_value }}</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-3xl text-center">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">{{ instance.stat_2_title }}</p>
+                    <p class="text-3xl font-black text-royal-red">{{ instance.stat_2_value }}</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-3xl text-center">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">{{ instance.stat_3_title }}</p>
+                    <p class="text-3xl font-black text-royal-red">{{ instance.stat_3_value }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+{% load static cms_tags %}
+<section id="ai-future" class="ai-section-gradient py-32 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="bg-white p-8 rounded-[40px] shadow-xl border border-gray-100 z-10 relative">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 bg-royal-red rounded-xl flex items-center justify-center text-white">
+                            <i class="fas fa-robot text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Prompt Engineering Lab</h3>
+                    </div>
+                    <div class="space-y-4">
+                        {{ instance.body|safe }}
+                    </div>
+                </div>
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-royal-red/5 rounded-full blur-2xl"></div>
+            </div>
+
+            <div>
+                <span class="text-royal-red font-bold text-sm tracking-widest uppercase">{{ instance.pretitle }}</span>
+                <h2 class="serif-font text-4xl md:text-5xl font-black mt-4 mb-8 leading-tight">{{ instance.title }}</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8">{{ instance.body|safe }}</p>
+            </div>
+        </div>
+    </div>
+</section>

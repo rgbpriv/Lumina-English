@@ -1,0 +1,28 @@
+{% load static cms_tags sekizai_tags djangocms_alias_tags %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Lumina{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'website/styles/styles.css' %}">
+    {% render_block "css" %}
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body class="antialiased">
+    {%cms_toolbar%}
+    {% block header %}{%static_alias 'site_navigation'%}{% endblock %}
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    {% block footer %}{%static_alias 'site_footer'%}{% endblock %}
+
+    {% render_block "js" %}
+    <script src="{% static 'website/js/scripts.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+  </body>
+ </html>

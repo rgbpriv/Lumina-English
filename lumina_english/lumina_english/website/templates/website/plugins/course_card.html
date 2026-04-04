@@ -1,0 +1,15 @@
+<div class="bg-white p-10 rounded-[32px] border border-gray-100 card-plugin">
+    <div class="w-14 h-14 bg-red-50 text-royal-red flex items-center justify-center rounded-2xl mb-8">
+        <i class="fas fa-graduation-cap text-2xl"></i>
+    </div>
+    <h3 class="text-2xl font-bold mb-4">{{ instance.title }}</h3>
+    <p class="text-gray-600 mb-8 text-sm">{{ instance.description }}</p>
+    <div class="flex items-center justify-between border-t border-gray-50 pt-6">
+        <span class="text-royal-red font-bold">{{ instance.price }}</span>
+        {% if instance.highlight %}
+            <button class="text-sm font-extrabold uppercase tracking-widest text-royal-red">Popular</button>
+        {% else %}
+            <button class="text-sm font-extrabold uppercase tracking-widest text-gray-400 hover:text-royal-red transition">Details</button>
+        {% endif %}
+    </div>
+</div>
