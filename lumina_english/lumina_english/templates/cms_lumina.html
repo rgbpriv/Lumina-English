@@ -1,16 +1,26 @@
-{% extends "base_tailwind.html" %}
-{% load cms_tags sekizai_tags %}
-
-{% block title %}{% page_attribute 'title' %} - Lumina{% endblock %}
-
-{% block header %}
-    {% placeholder "header" %}
+{% extends "djangocms_frontend.html" %}
+{%load static cms_tags djangocms_alias_tags%}
+{% block page_head %}
+{{block.super}}
+<script>
+  (function() {
+    const theme = localStorage.getItem('theme') || 'system';
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (theme === 'dark' || (theme === 'system' && isDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}">
 {% endblock %}
 
+{% block body_attrs %}overflow-x-hidden{% endblock %}
 {% block content %}
-    {% placeholder "hero" %}
-{% endblock %}
-
-{% block footer %}
-    {% placeholder "footer" %}
+{%static_alias 'navbar'%}
+{%block core_content%}{%placeholder 'content'%}{% endblock %}
+{%static_alias 'footer'%}
 {% endblock %}

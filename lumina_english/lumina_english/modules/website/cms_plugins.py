@@ -1,22 +1,24 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import gettext_lazy as _
-from .models import SimpleText, CourseCard
-
-from .models import (
-    Navigation,
-    HeroSection,
-    AISection,
-    CoursesSection,
-    DashboardSection,
-    Footer,
-    EnrollmentModal,
+from .models import LuminaFrontendBaseModel
+from .cms_forms import (
+    HeroSectionForm,
+    SimpleTextForm,
+    CourseCardForm,
+    LuminaNavigationForm,
+    AISectionForm,
+    CoursesSectionForm,
+    DashboardForm,
+    FooterForm,
+    EnrollmentModalForm,
 )
 
 
 @plugin_pool.register_plugin
 class SimpleTextPlugin(CMSPluginBase):
-    model = SimpleText
+    model = LuminaFrontendBaseModel
+    form = SimpleTextForm
     module = _('Lumina')
     name = _('Simple Text (HTML)')
     render_template = 'website/plugins/simple_text.html'
@@ -31,7 +33,8 @@ class SimpleTextPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class CourseCardPlugin(CMSPluginBase):
-    model = CourseCard
+    model = LuminaFrontendBaseModel
+    form = CourseCardForm
     module = _('Lumina')
     name = _('Course Card')
     render_template = 'website/plugins/course_card.html'
@@ -46,7 +49,8 @@ class CourseCardPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class LuminaNavigationPlugin(CMSPluginBase):
-    model = Navigation
+    model = LuminaFrontendBaseModel
+    form = LuminaNavigationForm
     module = _('Lumina')
     name = _('Navigation')
     render_template = 'website/plugins/navigation.html'
@@ -60,7 +64,8 @@ class LuminaNavigationPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class HeroPlugin(CMSPluginBase):
-    model = HeroSection
+    model = LuminaFrontendBaseModel
+    form = HeroSectionForm
     module = _('Lumina')
     name = _('Hero Section')
     render_template = 'website/plugins/hero.html'
@@ -74,7 +79,8 @@ class HeroPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class AISectionPlugin(CMSPluginBase):
-    model = AISection
+    model = LuminaFrontendBaseModel
+    form = AISectionForm
     module = _('Lumina')
     name = _('AI Era Section')
     render_template = 'website/plugins/ai_section.html'
@@ -88,7 +94,8 @@ class AISectionPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class CoursesSectionPlugin(CMSPluginBase):
-    model = CoursesSection
+    model = LuminaFrontendBaseModel
+    form = CoursesSectionForm
     module = _('Lumina')
     name = _('Courses Section')
     render_template = 'website/plugins/courses_section.html'
@@ -102,7 +109,8 @@ class CoursesSectionPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class DashboardPlugin(CMSPluginBase):
-    model = DashboardSection
+    model = LuminaFrontendBaseModel
+    form = DashboardForm
     module = _('Lumina')
     name = _('Dashboard Section')
     render_template = 'website/plugins/dashboard.html'
@@ -116,7 +124,8 @@ class DashboardPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class FooterPlugin(CMSPluginBase):
-    model = Footer
+    model = LuminaFrontendBaseModel
+    form = FooterForm
     module = _('Lumina')
     name = _('Footer')
     render_template = 'website/plugins/footer.html'
@@ -130,7 +139,8 @@ class FooterPlugin(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class EnrollmentModalPlugin(CMSPluginBase):
-    model = EnrollmentModal
+    model = LuminaFrontendBaseModel
+    form = EnrollmentModalForm
     module = _('Lumina')
     name = _('Enrollment Modal')
     render_template = 'website/plugins/enrollment_modal.html'

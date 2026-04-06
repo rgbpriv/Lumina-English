@@ -81,7 +81,8 @@ INSTALLED_APPS = [
     'djangocms_frontend.contrib.utilities',
 
     # Local website app (plugins/templates)
-    'lumina_english.website',
+    'lumina_english.modules.account',
+    'lumina_english.modules.website',
 ]
 
 MIDDLEWARE = [
@@ -205,7 +206,6 @@ SITE_ID = 1
 
 CMS_TEMPLATES = (
     ("cms_lumina.html", _("Lumina Landing")),
-    ("base_tailwind.html", _("Standard")),
 )
 
 # Enable permissions

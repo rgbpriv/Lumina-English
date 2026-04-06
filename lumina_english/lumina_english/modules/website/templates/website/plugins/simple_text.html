@@ -1,5 +1,5 @@
 {# Renders arbitrary HTML stored in the plugin instance.content. #}
 {% load static %}
-<div class="cms-simple-text" data-cms-plugin-id="{{ instance.pk }}">
+<div class="cms-simple-text {{ instance.css_classes }}" data-cms-plugin-id="{{ instance.pk }}">
     {{ instance.content|safe }}
 </div>

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap');
+
+:root {
+  --royal-red: #9b1b30;
+  --deep-crimson: #7a1425;
+  --ai-blue: #1e3a8a;
+  --off-white: #fdfdfd;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--off-white);
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+.serif-font {
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-royal-red {
+  background-color: var(--royal-red);
+}
+
+.text-royal-red {
+  color: var(--royal-red);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(155, 27, 48, 0.1);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #9b1b30 0%, #4a0e18 100%);
+}
+
+.ai-section-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(155, 27, 48, 0.1);
+}
+
+.btn-premium {
+  background: var(--royal-red);
+  color: white;
+  transition: all 0.3s;
+}
+
+.btn-premium:hover {
+  background: var(--deep-crimson);
+  transform: scale(1.02);
+}
+
+.float {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+#enrollModal {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
