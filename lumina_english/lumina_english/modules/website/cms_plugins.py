@@ -82,7 +82,7 @@ class AISectionPlugin(CMSPluginBase):
     model = LuminaFrontendBaseModel
     form = AISectionForm
     module = _('Lumina')
-    name = _('AI Era Section')
+    name = _('IELTS Focus Section')
     render_template = 'website/plugins/ai_section.html'
     allow_children = False
 
