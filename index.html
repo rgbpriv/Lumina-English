@@ -1,264 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina | Future-Proof Your Communication</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumina — English Training Institute, Dhaka</title>
+  <meta name="description" content="Lumina teaches IELTS and practical English through speaking, media, shadowing, and task-based learning. Dhaka's premium English institute for study abroad readiness.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-royal-red flex items-center justify-center rounded-xl shadow-lg">
-                    <span class="text-white font-bold text-xl">L</span>
-                </div>
-                <span class="text-2xl font-extrabold tracking-tighter text-royal-red">LUMINA</span>
-            </div>
-            
-            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest text-gray-600">
-                <a href="#home" class="hover:text-royal-red transition">Home</a>
-                <a href="#ai-future" class="hover:text-royal-red transition">AI Era</a>
-                <a href="#courses" class="hover:text-royal-red transition">Programs</a>
-                <a href="#dashboard" class="hover:text-royal-red transition">Portal</a>
-            </div>
+  <!-- ─── NAV ─── -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <a href="#home" class="nav-logo">Lumin<span>a</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="#programs">The Course</a></li>
+      <li><a href="#teach">Methods</a></li>
+      <li><a href="#ielts">IELTS</a></li>
+      <li><a href="#beyond">Study Abroad</a></li>
+      <li><a href="#philosophy">About</a></li>
+    </ul>
+    <a href="#enroll" class="nav-cta">Book Consultation</a>
+    <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-            <button onclick="openModal()" class="btn-premium px-8 py-3 rounded-full text-xs font-bold shadow-lg uppercase tracking-widest">
-                Join Lumina
-            </button>
-        </div>
-    </nav>
+  <!-- Mobile drawer -->
+  <nav class="drawer" id="drawer" aria-label="Mobile navigation">
+    <a href="#programs">The Course</a>
+    <a href="#teach">How We Teach</a>
+    <a href="#ielts">IELTS</a>
+    <a href="#beyond">Study Abroad</a>
+    <a href="#philosophy">About</a>
+    <a href="#enroll" class="drawer-cta">Book a Consultation</a>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20 px-6 overflow-hidden relative">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="text-white z-10">
-                <span class="inline-block px-4 py-1 border border-white/30 rounded-full text-[10px] font-bold tracking-widest mb-6 uppercase bg-white/5">Bangladesh's Premier Language Hub</span>
-                <h1 class="serif-font text-5xl md:text-7xl leading-tight mb-8">English is the New <span class="text-red-300">Code.</span></h1>
-                <p class="text-lg text-gray-200 mb-10 max-w-lg leading-relaxed">Master the global language of business and technology. From IELTS success to AI-driven communication, Lumina equips you for the future.</p>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button onclick="openModal()" class="bg-white text-royal-red px-8 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition shadow-2xl">Start Your Journey</button>
-                    <div class="flex items-center space-x-4 px-4 py-4">
-                        <div class="flex -space-x-3">
-                            <img src="https://i.pravatar.cc/100?u=1" class="w-10 h-10 rounded-full border-2 border-royal-red">
-                            <img src="https://i.pravatar.cc/100?u=2" class="w-10 h-10 rounded-full border-2 border-royal-red">
-                            <img src="https://i.pravatar.cc/100?u=3" class="w-10 h-10 rounded-full border-2 border-royal-red">
-                        </div>
-                        <span class="text-xs font-bold uppercase tracking-wider text-red-100">5k+ Global Alumni</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden md:block relative">
-                <div class="absolute inset-0 bg-white/5 blur-3xl rounded-full"></div>
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80" alt="Future Education" class="rounded-[40px] shadow-2xl border-8 border-white/10 relative z-10 transform -rotate-2">
-            </div>
-        </div>
-    </section>
 
-    <!-- AI Era Section (New Segment) -->
-    <section id="ai-future" class="ai-section-gradient py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="relative">
-                    <div class="bg-white p-8 rounded-[40px] shadow-xl border border-gray-100 z-10 relative">
-                        <div class="flex items-center space-x-4 mb-6">
-                            <div class="w-12 h-12 bg-royal-red rounded-xl flex items-center justify-center text-white">
-                                <i class="fas fa-robot text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Prompt Engineering Lab</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="bg-gray-50 p-4 rounded-2xl border-l-4 border-royal-red">
-                                <p class="text-xs font-bold text-gray-400 uppercase mb-1">Bad Prompt</p>
-                                <p class="text-sm text-gray-600 italic">"Write me a email for job application."</p>
-                            </div>
-                            <div class="bg-red-50 p-4 rounded-2xl border-l-4 border-green-500">
-                                <p class="text-xs font-bold text-royal-red uppercase mb-1">Elite Prompt (The Lumina Way)</p>
-                                <p class="text-sm text-gray-800 font-medium italic">"Compose a persuasive, professional cover letter for a Senior Product Analyst role, emphasizing 3 years of experience in fintech and a 8.5 IELTS proficiency..."</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Decorative element -->
-                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-royal-red/5 rounded-full blur-2xl"></div>
-                </div>
-
-                <div>
-                    <span class="text-royal-red font-bold text-sm tracking-widest uppercase">The AI Enabled Workforce</span>
-                    <h2 class="serif-font text-4xl md:text-5xl font-black mt-4 mb-8 leading-tight">The 21st Century <br><span class="text-royal-red">Power Skill:</span> Clarity.</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                        In an AI-driven world, your value isn't just knowing the tools—it's how you <strong>instruct</strong> them. English is the universal operating system for AI. 
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="mt-1 text-royal-red"><i class="fas fa-terminal"></i></div>
-                            <div>
-                                <h4 class="font-bold">English for Prompting</h4>
-                                <p class="text-sm text-gray-500">AI only performs as well as you can explain. We teach the nuances of semantics and syntax that make AI work for you.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="mt-1 text-royal-red"><i class="fas fa-brain"></i></div>
-                            <div>
-                                <h4 class="font-bold">Critical Communication</h4>
-                                <p class="text-sm text-gray-500">While AI generates, humans curate. Learn to edit and refine English content with an expert's eye.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Course Section -->
-    <section id="courses" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="serif-font text-4xl text-gray-900">Bespoke Mastery Programs</h2>
-            <p class="text-gray-500 mt-4">Curricula designed for the global professional.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- IELTS Premium -->
-            <div class="bg-white p-10 rounded-[32px] border border-gray-100 card-hover">
-                <div class="w-14 h-14 bg-red-50 text-royal-red flex items-center justify-center rounded-2xl mb-8">
-                    <i class="fas fa-graduation-cap text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">IELTS Mastery</h3>
-                <p class="text-gray-600 mb-8 text-sm">Beyond just a score. We build the academic foundation required for Ivy League and top-tier global universities.</p>
-                <div class="flex items-center justify-between border-t border-gray-50 pt-6">
-                    <span class="text-royal-red font-bold">BDT 15,500</span>
-                    <button class="text-sm font-extrabold uppercase tracking-widest text-gray-400 hover:text-royal-red transition">Details</button>
-                </div>
-            </div>
-
-            <!-- AI-Ready Corporate -->
-            <div class="bg-white p-10 rounded-[32px] border border-gray-100 card-hover shadow-xl ring-2 ring-royal-red/5">
-                <div class="w-14 h-14 bg-royal-red text-white flex items-center justify-center rounded-2xl mb-8">
-                    <i class="fas fa-microchip text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">The AI-Speaker</h3>
-                <p class="text-gray-600 mb-8 text-sm">Advanced corporate communication integrated with AI workflow management and prompt mastery.</p>
-                <div class="flex items-center justify-between border-t border-gray-50 pt-6">
-                    <span class="text-royal-red font-bold">BDT 18,000</span>
-                    <button class="text-sm font-extrabold uppercase tracking-widest text-royal-red">Popular</button>
-                </div>
-            </div>
-
-            <!-- Writing -->
-            <div class="bg-white p-10 rounded-[32px] border border-gray-100 card-hover">
-                <div class="w-14 h-14 bg-red-50 text-royal-red flex items-center justify-center rounded-2xl mb-8">
-                    <i class="fas fa-pen-nib text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">SOP & Precision</h3>
-                <p class="text-gray-600 mb-8 text-sm">Master the art of storytelling for Statement of Purpose and high-stakes business proposals.</p>
-                <div class="flex items-center justify-between border-t border-gray-50 pt-6">
-                    <span class="text-royal-red font-bold">BDT 10,000</span>
-                    <button class="text-sm font-extrabold uppercase tracking-widest text-gray-400 hover:text-royal-red transition">Details</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Student Dashboard (Mockup) -->
-    <section id="dashboard" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="bg-white rounded-[40px] shadow-3xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
-            <div class="w-full md:w-64 bg-gray-950 p-8 text-white">
-                <div class="flex items-center space-x-3 mb-10">
-                    <div class="w-8 h-8 rounded-full bg-royal-red"></div>
-                    <span class="font-bold tracking-widest text-[10px] uppercase">Lumina Portal</span>
-                </div>
-                <div class="space-y-6">
-                    <div class="flex items-center space-x-3 text-royal-red bg-white/5 p-3 rounded-xl">
-                        <i class="fas fa-chart-pie"></i>
-                        <span class="text-xs font-bold uppercase tracking-wider">Metrics</span>
-                    </div>
-                    <div class="flex items-center space-x-3 text-gray-500 hover:text-white transition p-3 cursor-pointer">
-                        <i class="fas fa-book"></i>
-                        <span class="text-xs font-bold uppercase tracking-wider">Courses</span>
-                    </div>
-                    <div class="flex items-center space-x-3 text-gray-500 hover:text-white transition p-3 cursor-pointer">
-                        <i class="fas fa-file-alt"></i>
-                        <span class="text-xs font-bold uppercase tracking-wider">Reports</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-1 p-8 md:p-16">
-                <div class="flex justify-between items-center mb-12">
-                    <div>
-                        <h2 class="text-3xl font-bold">Hello, Zarif</h2>
-                        <p class="text-gray-400 text-sm">Next Class: Tomorrow at 4:30 PM (Physical)</p>
-                    </div>
-                    <img src="https://ui-avatars.com/api/?name=Zarif+Ahmad&background=9B1B30&color=fff" class="w-14 h-14 rounded-2xl">
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 p-8 rounded-3xl text-center">
-                        <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">IELTS Mock Avg</p>
-                        <p class="text-3xl font-black text-royal-red">7.5</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-3xl text-center">
-                        <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">Prompt Accuracy</p>
-                        <p class="text-3xl font-black text-royal-red">94%</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-3xl text-center">
-                        <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">Attendance</p>
-                        <p class="text-3xl font-black text-royal-red">100%</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-950 text-white pt-24 pb-12 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center space-x-2 mb-8 md:mb-0">
-                <div class="w-8 h-8 bg-royal-red flex items-center justify-center rounded-lg">
-                    <span class="text-white font-bold text-lg">L</span>
-                </div>
-                <span class="text-2xl font-black tracking-tighter">LUMINA</span>
-            </div>
-            <div class="flex space-x-12 text-[10px] font-bold uppercase tracking-widest text-gray-500">
-                <a href="#" class="hover:text-white transition">Privacy</a>
-                <a href="#" class="hover:text-white transition">Terms</a>
-                <a href="#" class="hover:text-white transition">Campus</a>
-            </div>
-            <p class="mt-8 md:mt-0 text-[10px] text-gray-600 font-bold uppercase tracking-widest">© 2024 Lumina Education Group</p>
-        </div>
-    </footer>
-
-    <!-- Enrollment Modal -->
-    <div id="enrollModal" class="fixed inset-0 z- flex items-center justify-center p-6">
-        <div class="bg-white rounded-[40px] w-full max-w-lg overflow-hidden shadow-2xl">
-            <div class="bg-royal-red p-10 text-white relative">
-                <button onclick="closeModal()" class="absolute top-6 right-6 text-white/50 hover:text-white"><i class="fas fa-times text-xl"></i></button>
-                <h3 class="text-3xl font-black serif-font">The Future Awaits.</h3>
-                <p class="text-sm text-white/70 mt-2">Limited physical seats for the upcoming cohort.</p>
-            </div>
-            <form class="p-10 space-y-6">
-                <div>
-                    <input type="text" placeholder="Your Name" class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-royal-red outline-none transition">
-                </div>
-                <div>
-                    <input type="tel" placeholder="Contact Number" class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-royal-red outline-none transition">
-                </div>
-                <div>
-                    <select class="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:ring-2 focus:ring-royal-red outline-none transition">
-                        <option>IELTS Mastery</option>
-                        <option>The AI Speaker (Corporate)</option>
-                        <option>Academic Writing</option>
-                    </select>
-                </div>
-                <button class="w-full bg-royal-red text-white font-black py-5 rounded-2xl shadow-xl hover:bg-deep-crimson transition uppercase tracking-widest text-xs">Request Invitation</button>
-            </form>
-        </div>
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero-ghost" aria-hidden="true">L</div>
+    <div class="hero-body">
+      <div class="hero-eyebrow r">Dhaka's Premium English Institute</div>
+      <h1 class="hero-h1 r d1">
+        English is<br>the <em>new code.</em>
+      </h1>
+      <p class="hero-sub r d2">
+        Lumina teaches IELTS and practical English through speaking, media, shadowing, discussion, and real task-based learning — so that you arrive abroad ready for classrooms, interviews, and everything that comes after.
+      </p>
+      <div class="hero-actions r d3">
+        <a href="#enroll" class="btn-p">Book a Consultation</a>
+        <a href="#programs" class="btn-g">Explore the Course &rarr;</a>
+      </div>
     </div>
+    <div class="hero-strip r d4" aria-hidden="true">
+      <div class="hero-pill">
+        <strong>IELTS</strong>
+        <span>Band-targeted training</span>
+      </div>
+      <div class="strip-div"></div>
+      <div class="hero-pill">
+        <strong>Media-first</strong>
+        <span>Real language, real voices</span>
+      </div>
+      <div class="strip-div"></div>
+      <div class="hero-pill">
+        <strong>Study Abroad</strong>
+        <span>Full readiness — not just scores</span>
+      </div>
+    </div>
+  </section>
 
-    <script src="scripts/scripts.js"></script>
 
+  <!-- ─── WHY LUMINA ─── -->
+  <section id="why" aria-labelledby="why-h">
+    <div class="container">
+      <div class="why-lead">
+        <div class="label r">Why Lumina</div>
+        <h2 id="why-h" class="r d1">Most institutes teach rules.<br>We train <em>performance.</em></h2>
+        <p class="r d2">Lumina was built specifically for Bangladeshi EFL learners who need English that works — in IELTS exam rooms, university classrooms, job interviews, and the first week abroad. The difference isn't curriculum. It's how we teach.</p>
+      </div>
+      <div class="why-table r">
+        <div class="why-col">
+          <div class="why-col-head">Traditional Institute</div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <p>Grammar rules taught from textbooks, not from real language use</p>
+          </div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <p>Memorised essay templates that feel hollow and score poorly with trained examiners</p>
+          </div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <p>Passive listening to recycled test audios with no real depth</p>
+          </div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <p>Classroom English that disappears the moment class ends</p>
+          </div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <p>Band score as the entire goal — nothing prepared for what comes after</p>
+          </div>
+        </div>
+        <div class="why-col">
+          <div class="why-col-head">At Lumina</div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Shadowing from films, talks, and series — spoken rhythm before grammar labels</p>
+          </div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Writing through models and transformation — real thought clarity, not template-filling</p>
+          </div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Repeated meaningful listening to real media — vocabulary absorbed in layers</p>
+          </div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Task-based discussions and debates that build confidence under real communicative pressure</p>
+          </div>
+          <div class="why-row">
+            <svg class="wi" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>IELTS as a milestone inside a bigger goal: readiness for study, work, and life abroad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── HOW WE TEACH ─── -->
+  <section class="teach" id="teach" aria-labelledby="teach-h">
+    <div class="container">
+      <div class="label r">Our Methods</div>
+      <h2 id="teach-h" class="teach-head r d1">Six ways we teach<br>that actually work.</h2>
+      <p class="teach-sub r d2">Every method at Lumina is grounded in how language is actually acquired — through exposure, imitation, meaning, and use. Not rules. Not drills for their own sake.</p>
+      <div class="teach-grid">
+        <article class="teach-card r">
+          <span class="teach-n">01</span>
+          <h3>Shadowing from Real Media</h3>
+          <p>Students listen to scenes from films, series, and talks — then shadow the speaker: same speed, same rhythm, same intonation. You don't just hear English. You inhabit it.</p>
+        </article>
+        <article class="teach-card r d1">
+          <span class="teach-n">02</span>
+          <h3>Character Mimicry</h3>
+          <p>Each student chooses a character or speaker they connect with and imitates them across the course. This builds a personal voice rooted in natural, confident English rather than a scripted exam register.</p>
+        </article>
+        <article class="teach-card r d2">
+          <span class="teach-n">03</span>
+          <h3>Task-Based Discussion</h3>
+          <p>Real projects, debates, problem-solving, and group tasks replace drills. Students speak because they have something to figure out — pressure that mirrors real classroom and workplace communication.</p>
+        </article>
+        <article class="teach-card r">
+          <span class="teach-n">04</span>
+          <h3>Keyword Strategy for IELTS Reading</h3>
+          <p>Students learn to move through academic texts quickly: locating keywords, spotting paraphrases, and predicting answer locations. Smarter reading — not slower, more anxious reading.</p>
+        </article>
+        <article class="teach-card r d1">
+          <span class="teach-n">05</span>
+          <h3>Repeated Meaningful Input</h3>
+          <p>The same high-quality audio — from talks, interviews, and documentary excerpts — is revisited multiple times. Vocabulary is absorbed in context, not memorised in one sitting and forgotten by the next.</p>
+        </article>
+        <article class="teach-card r d2">
+          <span class="teach-n">06</span>
+          <h3>Writing Through Models</h3>
+          <p>Students study strong writing, then transform it: rewrite, expand, upgrade. From informal to IELTS academic. From scattered idea to clear paragraph. From draft to something worth submitting.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── THE COURSE ─── -->
+  <section id="programs" aria-labelledby="prog-h">
+    <div class="container">
+      <div class="label r">The Course</div>
+      <h2 id="prog-h" class="prog-head r d1">One course.<br>Everything inside it.</h2>
+      <p class="prog-sub r d2">Lumina runs a single, comprehensive one-month course. It covers IELTS preparation, practical English communication, AI prompt communication, and academic and professional writing — all woven together, not taught in isolation. Students repeat the course as many times as they need.</p>
+      <div class="prog-body r">
+        <div class="prog-main">
+          <div class="prog-tag">Lumina English — One Month Course</div>
+          <h3>Full English<br>Readiness</h3>
+          <p>IELTS training, spoken English, media-based learning, AI prompt communication, and academic writing — taught as one integrated experience. Not separate modules. One course, the whole picture.</p>
+          <a href="#enroll" class="prog-link">Book a Consultation &rarr;</a>
+          <div class="prog-meta">
+            <div class="prog-meta-item">
+              <strong>1 Month</strong>
+              <span>Per cycle</span>
+            </div>
+            <div class="prog-meta-item">
+              <strong>Repeatable</strong>
+              <span>Stay until ready</span>
+            </div>
+            <div class="prog-meta-item">
+              <strong>Dhaka</strong>
+              <span>Based in-person</span>
+            </div>
+          </div>
+        </div>
+        <div class="prog-includes">
+          <h4>What the course covers</h4>
+          <div class="prog-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>IELTS — all four skills: speaking, listening, reading, writing</p>
+          </div>
+          <div class="prog-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Shadowing, mimicry, and discussion — spoken fluency through real media</p>
+          </div>
+          <div class="prog-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Keyword reading strategy and academic reading speed</p>
+          </div>
+          <div class="prog-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Writing through models — essays, emails, SOPs, academic tasks</p>
+          </div>
+          <div class="prog-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>AI prompt communication — writing clear, effective instructions in English</p>
+          </div>
+          <div class="prog-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Study abroad readiness — classroom, interview, and professional communication</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── IELTS + REAL ENGLISH ─── -->
+  <section class="ielts" id="ielts" aria-labelledby="ielts-h">
+    <div class="container">
+      <div class="ielts-inner">
+        <div class="ielts-l">
+          <div class="label r">IELTS at Lumina</div>
+          <h2 id="ielts-h" class="r d1">The exam is<br>just the<br>beginning.</h2>
+          <p class="r d2">There are two ways to prepare for IELTS. One is tricks and templates. The other is building the English that makes the whole test manageable — and the life after it possible.</p>
+          <blockquote class="ielts-quote r d3">
+            "We train you for IELTS so you can handle real life, not just exam day."
+          </blockquote>
+          <p class="r d4" style="font-size:0.9375rem; color:var(--text-muted); line-height:1.8;">
+            At Lumina, IELTS preparation is immersive. Every task, every text, and every discussion is connected to the English you'll actually use in classrooms, offices, and conversations abroad.
+          </p>
+        </div>
+        <div class="ielts-r">
+          <div class="pillar-label r">Five foundations of our IELTS approach</div>
+          <div class="pillar r">
+            <div class="p-num">01</div>
+            <div>
+              <h4>Authentic Input, Not Drill Audios</h4>
+              <p>IELTS listening training uses real documentary excerpts, talks, and interviews — not recycled exam recordings. Your ear adjusts to natural speech before exam conditions arrive.</p>
+            </div>
+          </div>
+          <div class="pillar r d1">
+            <div class="p-num">02</div>
+            <div>
+              <h4>Speaking That Sounds Like a Person</h4>
+              <p>Daily shadowing and character-based work builds natural rhythm and fluency. Examiners respond to speakers who sound genuine — not rehearsed.</p>
+            </div>
+          </div>
+          <div class="pillar r d2">
+            <div class="p-num">03</div>
+            <div>
+              <h4>Smart Reading Strategies</h4>
+              <p>Keyword spotting, paraphrase matching, and time management — practised consistently on real academic texts, not just past papers under pressure.</p>
+            </div>
+          </div>
+          <div class="pillar r d3">
+            <div class="p-num">04</div>
+            <div>
+              <h4>Vocabulary Through Real Use</h4>
+              <p>Phrase banks are built from media, tasks, and discussions — not memorised word lists. You use the vocabulary before you are tested on it.</p>
+            </div>
+          </div>
+          <div class="pillar r d4">
+            <div class="p-num">05</div>
+            <div>
+              <h4>Writing With Clarity</h4>
+              <p>Students learn to organise ideas before they write. Paragraphs are built with purpose. Transformation tasks, model rewrites, and structured feedback replace template-filling.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── BEYOND IELTS ─── -->
+  <section id="beyond" aria-labelledby="beyond-h">
+    <div class="container">
+      <div class="label r">Study Abroad Readiness</div>
+      <h2 id="beyond-h" class="beyond-head r d1">IELTS is the start.<br>Readiness is <em>the goal.</em></h2>
+      <p class="beyond-intro r d2">Lumina trains students for the exam, the classroom, and the life that comes after. Because a high band score means little if you freeze in front of your professor, struggle in a group project, or can't write a professional email when it matters most.</p>
+      <div class="scenarios">
+        <article class="sc r">
+          <div class="sc-num">01</div>
+          <h3>Your First Class Abroad</h3>
+          <p>The professor opens for questions. Do you stay silent or do you raise your hand? Lumina trains you for the confidence to participate — to ask, clarify, and contribute — from the very first week.</p>
+        </article>
+        <article class="sc r d1">
+          <div class="sc-num">02</div>
+          <h3>Your First Job Application</h3>
+          <p>Campus roles, front-desk positions, research and assistant opportunities — these go to students who communicate well. Lumina trains you to speak professionally and present yourself clearly in English.</p>
+        </article>
+        <article class="sc r d2">
+          <div class="sc-num">03</div>
+          <h3>Your First Group Project</h3>
+          <p>Collaborative work abroad means constant discussion, negotiation, and sharing ideas across cultures. You will practise all of this at Lumina before you get there.</p>
+        </article>
+        <article class="sc r d3">
+          <div class="sc-num">04</div>
+          <h3>Your First Professional Email</h3>
+          <p>Emailing a professor, requesting a deadline extension, or writing to a support office — every message leaves an impression. Lumina's writing component covers exactly this.</p>
+        </article>
+        <article class="sc r">
+          <div class="sc-num">05</div>
+          <h3>Your First Week of Culture Shock</h3>
+          <p>The social adjustment is real. Lumina builds cultural fluency alongside language skills — small talk, group work, reading social situations, and the ease to connect across difference.</p>
+        </article>
+        <article class="sc r d1">
+          <div class="sc-num">06</div>
+          <h3>Your First Interview</h3>
+          <p>Visa interviews, internship applications, campus opportunities — being prepared to speak about yourself, your goals, and your experience in clear, confident English is a trainable skill. We train it.</p>
+        </article>
+      </div>
+      <div class="beyond-promise r">
+        <p>Lumina teaches the English that helps students <strong>survive less and participate more</strong> — in class, on campus, and in the first years of building a career abroad.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── STUDENT JOURNEY ─── -->
+  <section class="journey" id="journey" aria-labelledby="journey-h">
+    <div class="container">
+      <div class="label r">The Learning Path</div>
+      <h2 id="journey-h" class="journey-head r d1">How transformation<br>happens at Lumina.</h2>
+      <p class="journey-sub r d2">Not a curriculum. A process. Each stage builds on the last — from listening carefully to performing confidently.</p>
+      <div class="steps" role="list">
+        <div class="step r" role="listitem">
+          <div class="step-dot" aria-hidden="true">↓</div>
+          <div class="step-text">
+            <div class="step-n">Stage 01</div>
+            <h3>Watch</h3>
+            <p>Immersive exposure to real English through media, talks, and stories. You begin to hear how English actually sounds.</p>
+          </div>
+        </div>
+        <div class="step r d1" role="listitem">
+          <div class="step-dot" aria-hidden="true">↓</div>
+          <div class="step-text">
+            <div class="step-n">Stage 02</div>
+            <h3>Shadow</h3>
+            <p>You copy rhythm, tone, and delivery from real speakers. Your mouth learns what your ears already know.</p>
+          </div>
+        </div>
+        <div class="step r d2" role="listitem">
+          <div class="step-dot" aria-hidden="true">↓</div>
+          <div class="step-text">
+            <div class="step-n">Stage 03</div>
+            <h3>Speak</h3>
+            <p>Task-based speaking with real stakes. You stop translating from Bangla and start thinking directly in English.</p>
+          </div>
+        </div>
+        <div class="step r d3" role="listitem">
+          <div class="step-dot" aria-hidden="true">↓</div>
+          <div class="step-text">
+            <div class="step-n">Stage 04</div>
+            <h3>Think</h3>
+            <p>Debate, analysis, and idea-building. You develop the ability to reason and articulate clearly under pressure.</p>
+          </div>
+        </div>
+        <div class="step r d4" role="listitem">
+          <div class="step-dot" aria-hidden="true">↓</div>
+          <div class="step-text">
+            <div class="step-n">Stage 05</div>
+            <h3>Write</h3>
+            <p>From model to transformation to original work. Essays, emails, reports — built on real thinking, not borrowed templates.</p>
+          </div>
+        </div>
+        <div class="step r" role="listitem">
+          <div class="step-dot" aria-hidden="true">★</div>
+          <div class="step-text">
+            <div class="step-n">Stage 06</div>
+            <h3>Perform</h3>
+            <p>IELTS. The classroom. The interview. You arrive ready — not just score-ready, but life-ready for what comes next.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── OUTCOMES ─── -->
+  <section id="outcomes" aria-labelledby="out-h">
+    <div class="container">
+      <div class="label r">What Changes</div>
+      <h2 id="out-h" class="out-head r d1">The transformation<br>that stays with you.</h2>
+      <p class="out-sub r d2">At Lumina we don't measure success in test tricks. We measure it in what students can do — and who they become — when English stops being an obstacle.</p>
+      <div class="out-list" role="list">
+        <div class="out-item r" role="listitem">
+          <div class="out-i" aria-hidden="true">01</div>
+          <div>
+            <h3>Confident, Fluent Speaking</h3>
+            <p>Students leave Lumina with a speaking voice they trust — not just for exams, but for classrooms, group projects, interviews, and everyday conversations abroad.</p>
+          </div>
+        </div>
+        <div class="out-item r d1" role="listitem">
+          <div class="out-i" aria-hidden="true">02</div>
+          <div>
+            <h3>Real Listening Stamina</h3>
+            <p>After months of meaningful audio exposure, students follow native speakers at natural speed — in lectures, meetings, casual conversations, and academic discussions.</p>
+          </div>
+        </div>
+        <div class="out-item r d2" role="listitem">
+          <div class="out-i" aria-hidden="true">03</div>
+          <div>
+            <h3>Faster, Smarter Reading</h3>
+            <p>IELTS reading skills translate into academic reading fluency. Students skim, scan, and extract meaning efficiently — a skill that stays relevant through every year of university study.</p>
+          </div>
+        </div>
+        <div class="out-item r d3" role="listitem">
+          <div class="out-i" aria-hidden="true">04</div>
+          <div>
+            <h3>Professional Writing That Works</h3>
+            <p>Clear emails, strong essays, polished SOPs. The ability to write in English with intent — not just correctly, but persuasively and professionally in real contexts.</p>
+          </div>
+        </div>
+        <div class="out-item r" role="listitem">
+          <div class="out-i" aria-hidden="true">05</div>
+          <div>
+            <h3>Cultural and Social Fluency</h3>
+            <p>Students arrive abroad less disoriented. They know how to make small talk, navigate group dynamics, and interact with people from backgrounds very different from their own.</p>
+          </div>
+        </div>
+        <div class="out-item r d1" role="listitem">
+          <div class="out-i" aria-hidden="true">06</div>
+          <div>
+            <h3>IELTS Scores That Reflect Real Ability</h3>
+            <p>Band scores improve because English improves — not because students memorised templates. Examiners can tell the difference. So can employers, professors, and colleagues.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── PHILOSOPHY ─── -->
+  <section class="phil" id="philosophy" aria-labelledby="phil-h">
+    <div class="container">
+      <div class="phil-inner">
+        <div class="phil-l">
+          <div class="label r">Teaching Philosophy</div>
+          <h2 id="phil-h" class="r d1">Why we teach<br>the way we teach.</h2>
+        </div>
+        <div class="phil-r">
+          <blockquote class="r">
+            "Students improved fastest not when they studied harder, but when they stopped studying English and started living in it."
+          </blockquote>
+          <p class="r d1">Lumina grew out of one-to-one teaching where the pattern was unmistakable: learners who immersed themselves in media, mimicry, and real communication improved at a categorically different rate than those studying grammar in isolation. That observation is now the foundation of everything at Lumina.</p>
+          <div class="principles">
+            <div class="prin r">
+              <h4>Built for Bangladeshi EFL learners</h4>
+              <p>Lumina is not a generic institute transplanted to Dhaka. It is designed from the ground up for learners who live in Bangla and need usable English — for IELTS, for study abroad, for the AI era, and for meaningful work and communication in the world.</p>
+            </div>
+            <div class="prin r d1">
+              <h4>Performance before perfection</h4>
+              <p>Fluency comes from use, not from fear of mistakes. Lumina creates conditions where students communicate first and refine later — which is exactly how language is acquired in every context where people actually become fluent.</p>
+            </div>
+            <div class="prin r d2">
+              <h4>Media as the primary classroom</h4>
+              <p>Films, series, podcasts, and talks are not supplements at Lumina — they are the primary source of language. Real voices, real rhythm, real vocabulary in context. The language you absorb from media is the language that stays.</p>
+            </div>
+            <div class="prin r d3">
+              <h4>English for the world that exists</h4>
+              <p>The AI era demands clear, precise, confident English communication. Lumina prepares students for that world — for the professors, the platforms, the workplaces, and the opportunities that reward the ability to participate fully.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── CTA / FORM ─── -->
+  <section class="cta-sec" id="enroll" aria-labelledby="cta-h">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-l">
+          <div class="label r">Get in Touch</div>
+          <h2 id="cta-h" class="r d1">Start your<br>global English<br>journey.</h2>
+          <p class="r d2">Book a consultation and speak with our team. We'll help you understand how the course fits your goal, your timeline, and where you are right now.</p>
+          <div class="r d3">
+            <div class="cta-bullet">One-month course — next cohort forming now</div>
+            <div class="cta-bullet">Repeatable — stay until you're ready</div>
+            <div class="cta-bullet">Covers IELTS, speaking, writing, and AI English</div>
+            <div class="cta-bullet">Consultations available in Dhaka</div>
+          </div>
+        </div>
+        <div class="r d2">
+          <form class="form" id="inquiry-form" novalidate>
+            <div class="form-row">
+              <div class="fg">
+                <label for="f-name">Your Name</label>
+                <input type="text" id="f-name" name="name" placeholder="Full name" required autocomplete="name">
+              </div>
+              <div class="fg">
+                <label for="f-phone">Phone / WhatsApp</label>
+                <input type="tel" id="f-phone" name="phone" placeholder="+880" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="fg">
+              <label for="f-email">Email Address <span style="opacity:.5; font-weight:400;">(optional)</span></label>
+              <input type="email" id="f-email" name="email" placeholder="your@email.com" autocomplete="email">
+            </div>
+            <div class="fg">
+              <label for="f-goal">Your Goal</label>
+              <select id="f-goal" name="goal" required>
+                <option value="" disabled selected>Select your goal</option>
+                <option value="ielts">IELTS — target band score</option>
+                <option value="study-abroad">Study Abroad Readiness</option>
+                <option value="english">General English &amp; Communication</option>
+                <option value="ai-prompt">AI Prompt Communication</option>
+                <option value="writing">Academic or Professional Writing</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="f-msg">Anything else we should know</label>
+              <textarea id="f-msg" name="message" placeholder="Current level, timeline, specific goals…"></textarea>
+            </div>
+            <button type="submit" class="form-btn">Send Inquiry &rarr;</button>
+          </form>
+          <div id="form-ok" role="status" aria-live="polite">
+            Thank you — we'll be in touch within 24 hours to discuss how Lumina can help you reach your goals.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h3>Lumina</h3>
+        <p>English training for IELTS, study abroad, and the global stage. Based in Dhaka, Bangladesh.</p>
+      </div>
+      <div class="foot-col">
+        <h4>The Course</h4>
+        <ul>
+          <li><a href="#programs">Full English Readiness</a></li>
+          <li><a href="#teach">How We Teach</a></li>
+          <li><a href="#ielts">IELTS Approach</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Institute</h4>
+        <ul>
+          <li><a href="#beyond">Study Abroad Readiness</a></li>
+          <li><a href="#philosophy">Teaching Philosophy</a></li>
+          <li><a href="#enroll">Book a Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2025 Lumina English Institute, Dhaka. All rights reserved.</p>
+      <span class="foot-tagline">English is the new code.</span>
+    </div>
+  </footer>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
