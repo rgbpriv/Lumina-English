@@ -59,13 +59,57 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ─── INQUIRY FORM ─── */
-document.getElementById('inquiry-form').addEventListener('submit', e => {
-  e.preventDefault();
-  const form = e.target;
-  const name  = form.querySelector('#f-name').value.trim();
-  const phone = form.querySelector('#f-phone').value.trim();
-  const goal  = form.querySelector('#f-goal').value;
-  if (!name || !phone || !goal) return;
-  form.style.display = 'none';
-  document.getElementById('form-ok').style.display = 'block';
-});
+const inquiryForm = document.getElementById('inquiry-form');
+const formOk  = document.getElementById('form-ok');
+const formErr = document.getElementById('form-err');
+
+function showFormError(msg) {
+  if (!formErr) return;
+  formErr.textContent = msg;
+  formErr.style.display = 'block';
+}
+
+if (inquiryForm) {
+  inquiryForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const btn  = form.querySelector('.form-btn');
+    const data = {
+      name:    form.querySelector('#f-name').value.trim(),
+      phone:   form.querySelector('#f-phone').value.trim(),
+      email:   form.querySelector('#f-email').value.trim(),
+      goal:    form.querySelector('#f-goal').value,
+      message: form.querySelector('#f-msg').value.trim(),
+      website: form.querySelector('[name="website"]').value, // honeypot
+    };
+
+    if (!data.name || !data.phone || !data.goal) {
+      showFormError('Please fill in your name, phone, and goal.');
+      return;
+    }
+
+    if (formErr) formErr.style.display = 'none';
+    const originalLabel = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = 'Sending…';
+
+    try {
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.ok) {
+        throw new Error(json.error || 'Submission failed. Please try again.');
+      }
+      form.style.display = 'none';
+      formOk.style.display = 'block';
+      formOk.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (err) {
+      btn.disabled = false;
+      btn.innerHTML = originalLabel;
+      showFormError(err.message || 'Something went wrong. Please try again or call us directly.');
+    }
+  });
+}

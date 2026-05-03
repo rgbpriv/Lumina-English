@@ -1,0 +1,14 @@
+{
+  "name": "lumina-english",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lumina English Institute — site + inquiry server",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js",
+    "preview": "npx serve . --listen 3000 --no-clipboard"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
