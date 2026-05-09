@@ -15,7 +15,7 @@
   --gold:        #C9A961;
   --line:        #DDD8CF;
   --line-dark:   rgba(255,255,255,0.09);
-  --serif:       'Cormorant Garamond', Georgia, serif;
+  --serif:       'Lora', Georgia, serif;
   --sans:        'Inter', system-ui, sans-serif;
   --max:         1200px;
   --pad:         clamp(1.5rem, 5vw, 3rem);
@@ -358,10 +358,10 @@ section { padding: clamp(5rem, 11vw, 9rem) 0; position: relative; }
 }
 .hero-h1 {
   font-family: var(--serif);
-  font-size: clamp(4rem, 10.5vw, 10.5rem);
-  font-weight: 500;
-  line-height: 0.95;
-  letter-spacing: -0.02em;
+  font-size: clamp(3rem, 10.5vw, 8rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   max-width: 12ch;
   margin-bottom: 2.25rem;
 }
@@ -728,7 +728,7 @@ section { padding: clamp(5rem, 11vw, 9rem) 0; position: relative; }
 .beyond-head { font-family: var(--serif); font-size: clamp(2.75rem, 5.5vw, 5rem); font-weight: 500; line-height: 1.08; max-width: 20ch; margin-bottom: 1.25rem; }
 .beyond-head em { font-style: italic; color: var(--accent); }
 .beyond-intro { font-size: 1.1rem; color: var(--text-muted); max-width: 54ch; margin-bottom: 4rem; line-height: 1.8; }
-.scenarios { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+.scenarios { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 4rem; }
 .sc {
   padding: 2.75rem;
   background: #fff;
@@ -1082,25 +1082,6 @@ footer { background: var(--bg-darker); border-top: 1px solid rgba(255,255,255,0.
 
   .scenarios { grid-template-columns: 1fr; }
 
-  .steps { grid-template-columns: 1fr; gap: 0; }
-  .steps::before { display: none; }
-  .step {
-    flex-direction: row;
-    text-align: left;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 1.75rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-  }
-  .step:last-child { border-bottom: none; }
-  .step-dot { flex-shrink: 0; margin-bottom: 0; }
-  .step-content { display: flex; flex-direction: column; }
-
-  .out-list { max-width: 100%; }
-
-  .phil-inner { grid-template-columns: 1fr; gap: 3.5rem; }
-  .phil-l { position: static; }
-
   .testi-item { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 0; }
   .testi-l { position: static; }
 
@@ -1112,11 +1093,14 @@ footer { background: var(--bg-darker); border-top: 1px solid rgba(255,255,255,0.
 
 @media (max-width: 600px) {
   body { font-size: 16px; }
+  section { padding: clamp(3.5rem, 8vw, 5rem) 0; }
+
+  .scenarios { grid-template-columns: 1fr; }
 
   .why-col { padding: 2rem 1.5rem; }
-  .teach-card { padding: 2.25rem 1.75rem; }
-  .sc { padding: 2rem; }
-  .beyond-promise { padding: 2.5rem 1.75rem; }
+  .teach-card { padding: 2rem 1.5rem; }
+  .sc { padding: 1.75rem; }
+  .beyond-promise { padding: 2.25rem 1.5rem; }
 
   .out-item { grid-template-columns: 60px 1fr; gap: 1.25rem; padding: 1.75rem 0; }
   .out-i { font-size: 2.5rem; }
